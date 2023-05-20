@@ -9,3 +9,5 @@ methods:{
 }
 
 directives v-on v-if
+
+ref

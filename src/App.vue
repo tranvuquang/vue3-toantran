@@ -1,21 +1,14 @@
 <script>
+import HelloWorld from "./components/HelloWorld.vue";
 export default {
   name: "App",
-  components: {},
+  components: { HelloWorld },
   data() {
-    return {
-      teamName: "RHP Team",
-      firstName: "Toan",
-      lastName: "Tran",
-      isHello: false,
-      isShowModal: false,
-    };
+    return {};
   },
   methods: {
-    onChangeName() {
-      this.firstName = "Sky";
-      this.lastName = "Albert";
-      this.isShowModal = !this.isShowModal;
+    onClick() {
+      console.log(this.$refs.hello);
     },
   },
 };
@@ -23,15 +16,9 @@ export default {
 
 <template>
   <div id="app">
-    <h1>
-      Hello from {{ teamName }} and
-      {{ !isHello ? `${firstName} ${lastName}` : "" }}
-    </h1>
-    <button @click="onChangeName">Change Name</button>
-
-    <div class="modal1" v-if="isShowModal">
-      <h2>Modal content</h2>
-    </div>
+    <h1>this is app</h1>
+    <button @click="onClick">Click me</button>
+    <HelloWorld msg="abc" ref="hello" />
   </div>
 </template>
 
