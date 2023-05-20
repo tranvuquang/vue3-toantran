@@ -11,3 +11,13 @@ methods:{
 directives v-on v-if
 
 ref
+
+modal
+
+props
+
+emit
+
+slot
+
+teleport
