@@ -1,25 +1,21 @@
 <script>
-import QuizForm from "./components/QuizForm.vue";
+import NavBar from "./components/NavBar.vue";
 export default {
   name: "App",
-  components: { QuizForm },
+  components: { NavBar },
   data() {
-    return {
-      isShowModal: false,
-    };
+    return {};
   },
-  methods: {
-    toggleModal() {
-      this.isShowModal = !this.isShowModal;
-    },
-  },
+  methods: {},
 };
 </script>
 
 <template>
   <div id="app">
     <h1>this is app</h1>
-    <QuizForm />
+    <NavBar />
+    <hr />
+    <router-view></router-view>
   </div>
 </template>
 
@@ -29,5 +25,4 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 </style>
